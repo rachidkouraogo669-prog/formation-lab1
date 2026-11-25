@@ -1,0 +1,29 @@
+[project]
+name = "diabete-lab"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Rachid-KOURAOGO", email = "a.kouraogo@edu.umi.ac.ma" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "joblib>=1.6.0",
+    "pandas>=3.1.1",
+    "pyyaml>=6.0.4",
+    "scikit-learn>=1.9.1",
+]
+
+[project.scripts]
+diabete-lab = "diabete_lab:main"
+diabete-train = "diabete_lab.train:main"
+
+[build-system]
+requires = ["uv_build>=0.13.10,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
